@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #060b17;
+    color: #e2e8f0;
+  }
+}
+
+/* Custom Sleek Cyber Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070d1e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1b2d56;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+
+/* Glassmorphism & Cyber Card Highlights */
+.cyber-card {
+  background-color: #0c152c;
+  border: 1px solid #1a2a4e;
+  border-radius: 0.75rem;
+}
+
+.cyber-card-subtle {
+  background-color: #091024;
+  border: 1px solid #162444;
+}
+
+.cyber-glow-blue {
+  box-shadow: 0 0 25px -5px rgba(37, 99, 235, 0.35);
+}
+
+.cyber-glow-cyan {
+  box-shadow: 0 0 25px -5px rgba(0, 210, 255, 0.35);
+}
+
+.cyber-glow-red {
+  box-shadow: 0 0 25px -5px rgba(239, 68, 68, 0.35);
+}
+
+/* Cyber Grid background utility */
+.cyber-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(30, 58, 110, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30, 58, 110, 0.12) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.05); }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s infinite ease-in-out;
+}
