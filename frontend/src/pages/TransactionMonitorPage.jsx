@@ -96,24 +96,24 @@ export default function TransactionMonitorPage() {
       {/* Header Bar */}
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div>
-          <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 block mb-0.5">
+          <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-700 dark:text-emerald-400 block mb-0.5">
             TRANSACTION MONITOR
           </span>
-          <h1 className="text-xl font-extrabold text-white tracking-wide">
+          <h1 className="text-xl font-extrabold text-slate-900 dark:text-white tracking-wide">
             Real-time Transaction Monitoring
           </h1>
-          <p className="text-xs text-slate-400 mt-0.5">
+          <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
             Monitor and analyze suspicious blockchain transactions in real-time
           </p>
         </div>
 
         {/* Live Status & Pause Button */}
         <div className="flex items-center gap-3">
-          <div className="hidden sm:flex items-center gap-2 bg-[#0b142d] border border-[#1b2b52] rounded-lg px-3 py-1.5 text-xs">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-            <span className="text-emerald-400 font-semibold">Live Monitoring</span>
-            <span className="text-slate-500">|</span>
-            <span className="text-slate-300 font-mono text-[11px]">{currentTime}</span>
+          <div className="hidden sm:flex items-center gap-2 bg-white dark:bg-[#0b142d] border border-slate-200 dark:border-[#1b2b52] rounded-md px-3 py-1.5 text-xs shadow-xs">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+            <span className="text-emerald-700 dark:text-emerald-400 font-semibold">Live Monitoring</span>
+            <span className="text-slate-400">|</span>
+            <span className="text-slate-700 dark:text-slate-300 font-mono text-[11px]">{currentTime}</span>
           </div>
 
           <button
@@ -121,10 +121,10 @@ export default function TransactionMonitorPage() {
               setIsMonitoring(!isMonitoring);
               showToast(isMonitoring ? "Stream paused." : "Live monitoring resumed.", "info");
             }}
-            className={`px-4 py-2 rounded-lg text-xs font-bold flex items-center gap-2 transition-all shadow cursor-pointer ${
+            className={`px-4 py-2 rounded-md text-xs font-bold flex items-center gap-2 transition-all shadow-xs cursor-pointer ${
               isMonitoring
                 ? 'bg-amber-600 hover:bg-amber-500 text-white'
-                : 'bg-emerald-600 hover:bg-emerald-500 text-white'
+                : 'bg-emerald-700 hover:bg-emerald-600 text-white'
             }`}
           >
             {isMonitoring ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
@@ -135,40 +135,40 @@ export default function TransactionMonitorPage() {
 
       {/* KPI Cards */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        <div className="bg-[#0b142d] border border-[#1b2b52] rounded-xl p-4 shadow">
-          <div className="text-2xl font-extrabold text-white">12,458</div>
-          <div className="text-xs text-slate-400 font-medium">Total Transactions</div>
-          <span className="text-[11px] font-bold text-emerald-400 mt-1 block">↑ 12% Last 24 hours</span>
+        <div className="bg-white dark:bg-[#0b142d] border border-slate-200 dark:border-[#1b2b52] rounded-lg p-4 shadow-xs">
+          <div className="text-2xl font-extrabold text-slate-900 dark:text-white">12,458</div>
+          <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">Total Transactions</div>
+          <span className="text-[11px] font-bold text-emerald-700 dark:text-emerald-400 mt-1 block">↑ 12% Last 24 hours</span>
         </div>
 
-        <div className="bg-[#0b142d] border border-[#1b2b52] rounded-xl p-4 shadow">
-          <div className="text-2xl font-extrabold text-red-400">892</div>
-          <div className="text-xs text-slate-400 font-medium">Suspicious Transactions</div>
-          <span className="text-[11px] font-bold text-red-400 mt-1 block">↑ 18% Last 24 hours</span>
+        <div className="bg-white dark:bg-[#0b142d] border border-slate-200 dark:border-[#1b2b52] rounded-lg p-4 shadow-xs">
+          <div className="text-2xl font-extrabold text-red-600 dark:text-red-400">892</div>
+          <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">Suspicious Transactions</div>
+          <span className="text-[11px] font-bold text-red-600 dark:text-red-400 mt-1 block">↑ 18% Last 24 hours</span>
         </div>
 
-        <div className="bg-[#0b142d] border border-[#1b2b52] rounded-xl p-4 shadow">
-          <div className="text-2xl font-extrabold text-rose-500">234</div>
-          <div className="text-xs text-slate-400 font-medium">High Risk</div>
-          <span className="text-[11px] font-bold text-rose-400 mt-1 block">↑ 24% Last 24 hours</span>
+        <div className="bg-white dark:bg-[#0b142d] border border-slate-200 dark:border-[#1b2b52] rounded-lg p-4 shadow-xs">
+          <div className="text-2xl font-extrabold text-rose-600 dark:text-rose-500">234</div>
+          <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">High Risk</div>
+          <span className="text-[11px] font-bold text-rose-600 dark:text-rose-400 mt-1 block">↑ 24% Last 24 hours</span>
         </div>
 
-        <div className="bg-[#0b142d] border border-[#1b2b52] rounded-xl p-4 shadow">
-          <div className="text-2xl font-extrabold text-cyan-400">1,246</div>
-          <div className="text-xs text-slate-400 font-medium">Monitored Wallets</div>
-          <span className="text-[11px] font-bold text-emerald-400 mt-1 block">Active tracking ↑ 8%</span>
+        <div className="bg-white dark:bg-[#0b142d] border border-slate-200 dark:border-[#1b2b52] rounded-lg p-4 shadow-xs">
+          <div className="text-2xl font-extrabold text-blue-700 dark:text-cyan-400">1,246</div>
+          <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">Monitored Wallets</div>
+          <span className="text-[11px] font-bold text-emerald-700 dark:text-emerald-400 mt-1 block">Active tracking ↑ 8%</span>
         </div>
       </div>
 
       {/* Charts & Filter Section */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
         {/* Transaction Volume 24h Line Chart */}
-        <div className="bg-[#0b142d] border border-[#1b2b52] rounded-xl p-4 shadow-lg">
-          <div className="flex items-center justify-between pb-2 border-b border-[#162548]">
-            <span className="text-xs font-bold text-white">Transaction Volume (24h)</span>
+        <div className="bg-white dark:bg-[#0b142d] border border-slate-200 dark:border-[#1b2b52] rounded-lg p-4 shadow-xs">
+          <div className="flex items-center justify-between pb-2 border-b border-slate-200 dark:border-[#162548]">
+            <span className="text-xs font-bold text-slate-900 dark:text-white">Transaction Volume (24h)</span>
             <div className="flex items-center gap-2 text-[10px]">
-              <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-blue-500"></span>Normal</span>
-              <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-red-500"></span>Suspicious</span>
+              <span className="flex items-center gap-1 text-slate-600 dark:text-slate-400"><span className="w-2 h-2 rounded-full bg-blue-600"></span>Normal</span>
+              <span className="flex items-center gap-1 text-slate-600 dark:text-slate-400"><span className="w-2 h-2 rounded-full bg-red-600"></span>Suspicious</span>
             </div>
           </div>
 
@@ -177,26 +177,26 @@ export default function TransactionMonitorPage() {
               {/* Normal curve (blue) */}
               <polyline
                 fill="none"
-                stroke="#3b82f6"
+                stroke="#2563eb"
                 strokeWidth="2"
                 points="10,80 50,70 100,50 150,30 200,40 240,25 270,35"
               />
               {/* Suspicious curve (red) */}
               <polyline
                 fill="none"
-                stroke="#ef4444"
+                stroke="#dc2626"
                 strokeWidth="2"
                 points="10,110 50,105 100,95 150,70 200,85 240,60 270,75"
               />
             </svg>
             {/* Tooltip mockup */}
-            <div className="absolute top-8 left-20 bg-[#070d1e] border border-[#1d2f5a] p-1.5 rounded text-[9px] shadow-lg">
-              <span className="text-slate-400 block">14 Apr 14:00</span>
-              <span className="text-blue-400 block">• Normal: 1,250</span>
-              <span className="text-red-400 block">• Suspicious: 210</span>
+            <div className="absolute top-8 left-20 bg-white dark:bg-[#070d1e] border border-slate-300 dark:border-[#1d2f5a] p-1.5 rounded-md text-[9px] shadow-sm">
+              <span className="text-slate-500 dark:text-slate-400 block font-medium">14 Apr 14:00</span>
+              <span className="text-blue-700 dark:text-blue-400 block">• Normal: 1,250</span>
+              <span className="text-red-600 dark:text-red-400 block">• Suspicious: 210</span>
             </div>
           </div>
-          <div className="flex justify-between text-[9px] text-slate-500 pt-1 border-t border-[#142347]">
+          <div className="flex justify-between text-[9px] text-slate-500 dark:text-slate-500 pt-1 border-t border-slate-200 dark:border-[#142347]">
             <span>10:00</span>
             <span>12:00</span>
             <span>14:00</span>
@@ -205,47 +205,47 @@ export default function TransactionMonitorPage() {
         </div>
 
         {/* Transaction Type Distribution */}
-        <div className="bg-[#0b142d] border border-[#1b2b52] rounded-xl p-4 shadow-lg">
-          <span className="text-xs font-bold text-white block pb-2 border-b border-[#162548]">
+        <div className="bg-white dark:bg-[#0b142d] border border-slate-200 dark:border-[#1b2b52] rounded-lg p-4 shadow-xs">
+          <span className="text-xs font-bold text-slate-900 dark:text-white block pb-2 border-b border-slate-200 dark:border-[#162548]">
             Transaction Type Distribution
           </span>
           <div className="flex items-center justify-center gap-3 py-3">
             <div className="relative w-28 h-28 flex items-center justify-center">
               <svg className="w-full h-full -rotate-90" viewBox="0 0 100 100">
-                <circle cx="50" cy="50" r="38" fill="transparent" stroke="#3b82f6" strokeWidth="16" strokeDasharray="138 238" strokeDashoffset="0" />
-                <circle cx="50" cy="50" r="38" fill="transparent" stroke="#00d2ff" strokeWidth="16" strokeDasharray="52 238" strokeDashoffset="-138" />
-                <circle cx="50" cy="50" r="38" fill="transparent" stroke="#f59e0b" strokeWidth="16" strokeDasharray="28 238" strokeDashoffset="-190" />
-                <circle cx="50" cy="50" r="38" fill="transparent" stroke="#a855f7" strokeWidth="16" strokeDasharray="12 238" strokeDashoffset="-218" />
+                <circle cx="50" cy="50" r="38" fill="transparent" stroke="#2563eb" strokeWidth="16" strokeDasharray="138 238" strokeDashoffset="0" />
+                <circle cx="50" cy="50" r="38" fill="transparent" stroke="#0284c7" strokeWidth="16" strokeDasharray="52 238" strokeDashoffset="-138" />
+                <circle cx="50" cy="50" r="38" fill="transparent" stroke="#d97706" strokeWidth="16" strokeDasharray="28 238" strokeDashoffset="-190" />
+                <circle cx="50" cy="50" r="38" fill="transparent" stroke="#7c3aed" strokeWidth="16" strokeDasharray="12 238" strokeDashoffset="-218" />
               </svg>
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-                <span className="text-xs font-extrabold text-white">12,458</span>
-                <span className="text-[7px] text-slate-400">Total Txs</span>
+                <span className="text-xs font-extrabold text-slate-900 dark:text-white">12,458</span>
+                <span className="text-[7px] text-slate-500 dark:text-slate-400">Total Txs</span>
               </div>
             </div>
 
             <div className="space-y-1 text-[10px]">
-              <div className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-blue-500"></span><span className="text-slate-300">Transfers</span><span className="text-slate-400">58%</span></div>
-              <div className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-cyan-400"></span><span className="text-slate-300">Smart Contracts</span><span className="text-slate-400">22%</span></div>
-              <div className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-amber-500"></span><span className="text-slate-300">Token Swaps</span><span className="text-slate-400">12%</span></div>
-              <div className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-purple-500"></span><span className="text-slate-300">NFT Transfers</span><span className="text-slate-400">5%</span></div>
-              <div className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-slate-500"></span><span className="text-slate-300">Others</span><span className="text-slate-400">3%</span></div>
+              <div className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-blue-600"></span><span className="text-slate-700 dark:text-slate-300">Transfers</span><span className="text-slate-500 dark:text-slate-400 font-semibold">58%</span></div>
+              <div className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-sky-500"></span><span className="text-slate-700 dark:text-slate-300">Smart Contracts</span><span className="text-slate-500 dark:text-slate-400 font-semibold">22%</span></div>
+              <div className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-amber-500"></span><span className="text-slate-700 dark:text-slate-300">Token Swaps</span><span className="text-slate-500 dark:text-slate-400 font-semibold">12%</span></div>
+              <div className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-purple-600"></span><span className="text-slate-700 dark:text-slate-300">NFT Transfers</span><span className="text-slate-500 dark:text-slate-400 font-semibold">5%</span></div>
+              <div className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-slate-400"></span><span className="text-slate-700 dark:text-slate-300">Others</span><span className="text-slate-500 dark:text-slate-400 font-semibold">3%</span></div>
             </div>
           </div>
         </div>
 
         {/* Network Filters */}
-        <div className="bg-[#0b142d] border border-[#1b2b52] rounded-xl p-4 shadow-lg space-y-2.5 text-xs">
-          <span className="text-xs font-bold text-white block pb-2 border-b border-[#162548]">
+        <div className="bg-white dark:bg-[#0b142d] border border-slate-200 dark:border-[#1b2b52] rounded-lg p-4 shadow-xs space-y-2.5 text-xs">
+          <span className="text-xs font-bold text-slate-900 dark:text-white block pb-2 border-b border-slate-200 dark:border-[#162548]">
             Network Filters
           </span>
 
           <div className="grid grid-cols-2 gap-2">
             <div>
-              <label className="text-[10px] text-slate-400 block mb-0.5">Blockchain</label>
+              <label className="text-[10px] text-slate-600 dark:text-slate-400 block mb-0.5 font-medium">Blockchain</label>
               <select
                 value={selectedNetwork}
                 onChange={(e) => setSelectedNetwork(e.target.value)}
-                className="w-full bg-[#070d1e] border border-[#1d2f5a] rounded p-1.5 text-xs text-white"
+                className="w-full bg-slate-50 dark:bg-[#070d1e] border border-slate-300 dark:border-[#1d2f5a] rounded-md p-1.5 text-xs text-slate-900 dark:text-white outline-none"
               >
                 <option value="All Networks">All Networks</option>
                 <option value="Bitcoin">Bitcoin</option>
@@ -257,11 +257,11 @@ export default function TransactionMonitorPage() {
             </div>
 
             <div>
-              <label className="text-[10px] text-slate-400 block mb-0.5">Risk Level</label>
+              <label className="text-[10px] text-slate-600 dark:text-slate-400 block mb-0.5 font-medium">Risk Level</label>
               <select
                 value={selectedRisk}
                 onChange={(e) => setSelectedRisk(e.target.value)}
-                className="w-full bg-[#070d1e] border border-[#1d2f5a] rounded p-1.5 text-xs text-white"
+                className="w-full bg-slate-50 dark:bg-[#070d1e] border border-slate-300 dark:border-[#1d2f5a] rounded-md p-1.5 text-xs text-slate-900 dark:text-white outline-none"
               >
                 <option value="All Levels">All Levels</option>
                 <option value="High">High Risk Only</option>
@@ -277,13 +277,13 @@ export default function TransactionMonitorPage() {
                 setSelectedNetwork('All Networks');
                 setSelectedRisk('All Levels');
               }}
-              className="px-3 py-1 bg-[#070d1e] hover:bg-[#122045] border border-[#162548] text-slate-400 hover:text-white rounded text-xs"
+              className="px-3 py-1 bg-slate-50 dark:bg-[#070d1e] hover:bg-slate-100 dark:hover:bg-[#122045] border border-slate-300 dark:border-[#162548] text-slate-700 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white rounded-md text-xs transition-colors shadow-xs"
             >
               Reset
             </button>
             <button
               onClick={() => showToast("Filters applied to live stream.", "success")}
-              className="px-4 py-1 bg-blue-600 hover:bg-blue-500 text-white rounded text-xs font-semibold shadow"
+              className="px-4 py-1 bg-blue-700 hover:bg-blue-600 text-white rounded-md text-xs font-semibold shadow-xs transition-colors cursor-pointer"
             >
               Apply Filters
             </button>
@@ -294,21 +294,21 @@ export default function TransactionMonitorPage() {
       {/* Main Bottom Grid: Live Transactions (Left 2 cols) & Network Status/Alerts (Right 1 col) */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Live Transactions Table */}
-        <div className="lg:col-span-2 bg-[#0b142d] border border-[#1b2b52] rounded-xl p-4 shadow-lg space-y-3">
-          <div className="flex items-center justify-between pb-2 border-b border-[#162548]">
+        <div className="lg:col-span-2 bg-white dark:bg-[#0b142d] border border-slate-200 dark:border-[#1b2b52] rounded-lg p-4 shadow-xs space-y-3">
+          <div className="flex items-center justify-between pb-2 border-b border-slate-200 dark:border-[#162548]">
             <div className="flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span className="text-xs font-bold text-white">Live Transactions</span>
-              <span className="text-[10px] px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800 font-semibold">
+              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span className="text-xs font-bold text-slate-900 dark:text-white">Live Transactions</span>
+              <span className="text-[10px] px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800 font-semibold">
                 Live Feed
               </span>
             </div>
-            <span className="text-[10px] text-slate-400">Auto-refreshes every 3 seconds</span>
+            <span className="text-[10px] text-slate-500 dark:text-slate-400">Auto-refreshes every 3 seconds</span>
           </div>
 
           <div className="overflow-x-auto">
-            <table className="w-full text-left text-xs text-slate-300">
-              <thead className="bg-[#070d1e] text-slate-400 uppercase text-[10px]">
+            <table className="w-full text-left text-xs text-slate-800 dark:text-slate-300">
+              <thead className="bg-slate-50 dark:bg-[#070d1e] text-slate-600 dark:text-slate-400 uppercase text-[10px] border-b border-slate-200 dark:border-[#162548]">
                 <tr>
                   <th className="py-2 px-2.5">Time</th>
                   <th className="py-2 px-2.5">Tx Hash</th>
@@ -321,21 +321,21 @@ export default function TransactionMonitorPage() {
                   <th className="py-2 px-2.5">Details</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[#152345]">
+              <tbody className="divide-y divide-slate-200 dark:divide-[#152345]">
                 {filteredTxs.map((tx, idx) => (
-                  <tr key={tx.id || idx} className="hover:bg-[#0e1b3d]/70 transition-colors">
-                    <td className="py-2 px-2.5 text-slate-400 text-[11px] font-mono">{tx.time}</td>
-                    <td className="py-2 px-2.5 font-mono text-cyan-400 hover:underline cursor-pointer">{tx.hash}</td>
-                    <td className="py-2 px-2.5 font-mono text-slate-400">{tx.from}</td>
-                    <td className="py-2 px-2.5 font-mono text-slate-400">{tx.to}</td>
-                    <td className="py-2 px-2.5 font-bold text-white">{tx.amount}</td>
-                    <td className="py-2 px-2.5 font-semibold text-amber-400">{tx.token}</td>
-                    <td className="py-2 px-2.5 text-slate-300">{tx.network}</td>
+                  <tr key={tx.id || idx} className="hover:bg-slate-50 dark:hover:bg-[#0e1b3d]/70 transition-colors">
+                    <td className="py-2 px-2.5 text-slate-500 dark:text-slate-400 text-[11px] font-mono">{tx.time}</td>
+                    <td className="py-2 px-2.5 font-mono text-blue-700 dark:text-cyan-400 hover:underline cursor-pointer">{tx.hash}</td>
+                    <td className="py-2 px-2.5 font-mono text-slate-600 dark:text-slate-400">{tx.from}</td>
+                    <td className="py-2 px-2.5 font-mono text-slate-600 dark:text-slate-400">{tx.to}</td>
+                    <td className="py-2 px-2.5 font-bold text-slate-900 dark:text-white">{tx.amount}</td>
+                    <td className="py-2 px-2.5 font-semibold text-amber-700 dark:text-amber-400">{tx.token}</td>
+                    <td className="py-2 px-2.5 text-slate-700 dark:text-slate-300">{tx.network}</td>
                     <td className="py-2 px-2.5">
                       <span className={`text-[10px] px-2 py-0.5 rounded font-bold border ${
-                        tx.risk === 'High' ? 'text-red-400 bg-red-950/60 border-red-800' :
-                        tx.risk === 'Medium' ? 'text-amber-400 bg-amber-950/60 border-amber-800' :
-                        'text-emerald-400 bg-emerald-950/60 border-emerald-800'
+                        tx.risk === 'High' ? 'text-red-700 bg-red-100 dark:text-red-400 dark:bg-red-950/60 border-red-300 dark:border-red-800' :
+                        tx.risk === 'Medium' ? 'text-amber-800 bg-amber-100 dark:text-amber-400 dark:bg-amber-950/60 border-amber-300 dark:border-amber-800' :
+                        'text-emerald-800 bg-emerald-100 dark:text-emerald-400 dark:bg-emerald-950/60 border-emerald-300 dark:border-emerald-800'
                       }`}>
                         {tx.risk}
                       </span>
@@ -346,7 +346,7 @@ export default function TransactionMonitorPage() {
                           showToast(`Inspecting tx payload ${tx.hash}`, 'info');
                           setCurrentPage('wallet-search');
                         }}
-                        className="text-blue-400 hover:text-blue-300 flex items-center gap-1"
+                        className="text-blue-700 dark:text-blue-400 hover:underline flex items-center gap-1 font-semibold"
                       >
                         <Eye className="w-3 h-3" />
                         <span>View</span>
@@ -362,8 +362,8 @@ export default function TransactionMonitorPage() {
         {/* Right Column: Network Status, Alert Rules & Live Alerts */}
         <div className="space-y-4">
           {/* Network Status */}
-          <div className="bg-[#0b142d] border border-[#1b2b52] rounded-xl p-4 shadow-lg text-xs">
-            <span className="text-xs font-bold text-white block pb-2 border-b border-[#162548]">
+          <div className="bg-white dark:bg-[#0b142d] border border-slate-200 dark:border-[#1b2b52] rounded-lg p-4 shadow-xs text-xs">
+            <span className="text-xs font-bold text-slate-900 dark:text-white block pb-2 border-b border-slate-200 dark:border-[#162548]">
               Network Status
             </span>
             <div className="space-y-2 mt-2">
@@ -374,11 +374,11 @@ export default function TransactionMonitorPage() {
                 { name: "Polygon", status: "Online", tps: "924 tx/min" },
                 { name: "Solana", status: "Online", tps: "1,216 tx/min" },
               ].map((net, idx) => (
-                <div key={idx} className="flex items-center justify-between py-1 border-b border-[#142347]">
-                  <span className="text-slate-200 font-medium">{net.name}</span>
+                <div key={idx} className="flex items-center justify-between py-1 border-b border-slate-100 dark:border-[#142347]">
+                  <span className="text-slate-800 dark:text-slate-200 font-medium">{net.name}</span>
                   <div className="flex items-center gap-2">
-                    <span className="text-emerald-400 font-semibold flex items-center gap-1">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> {net.status}
+                    <span className="text-emerald-700 dark:text-emerald-400 font-semibold flex items-center gap-1">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> {net.status}
                     </span>
                     <span className="text-slate-500 text-[10px]">{net.tps}</span>
                   </div>
@@ -388,8 +388,8 @@ export default function TransactionMonitorPage() {
           </div>
 
           {/* Alert Rules Toggleable Checklist */}
-          <div className="bg-[#0b142d] border border-[#1b2b52] rounded-xl p-4 shadow-lg text-xs space-y-2">
-            <span className="text-xs font-bold text-white block pb-2 border-b border-[#162548]">
+          <div className="bg-white dark:bg-[#0b142d] border border-slate-200 dark:border-[#1b2b52] rounded-lg p-4 shadow-xs text-xs space-y-2">
+            <span className="text-xs font-bold text-slate-900 dark:text-white block pb-2 border-b border-slate-200 dark:border-[#162548]">
               Alert Rules
             </span>
             {[
@@ -400,22 +400,22 @@ export default function TransactionMonitorPage() {
               { id: 'crossChain', label: 'Cross-chain Transfers' },
             ].map((rule) => (
               <label key={rule.id} className="flex items-center justify-between py-1 cursor-pointer">
-                <span className="text-slate-300 text-[11px]">{rule.label}</span>
+                <span className="text-slate-700 dark:text-slate-300 text-[11px]">{rule.label}</span>
                 <input 
                   type="checkbox" 
                   checked={alertRules[rule.id]} 
                   onChange={() => toggleRule(rule.id)}
-                  className="accent-blue-500 rounded" 
+                  className="accent-blue-600 rounded" 
                 />
               </label>
             ))}
           </div>
 
           {/* Live Alerts */}
-          <div className="bg-[#0b142d] border border-[#1b2b52] rounded-xl p-4 shadow-lg text-xs space-y-2">
-            <div className="flex items-center justify-between pb-2 border-b border-[#162548]">
-              <span className="text-xs font-bold text-white">Live Alerts</span>
-              <span className="text-[10px] text-blue-400 hover:underline cursor-pointer">View All</span>
+          <div className="bg-white dark:bg-[#0b142d] border border-slate-200 dark:border-[#1b2b52] rounded-lg p-4 shadow-xs text-xs space-y-2">
+            <div className="flex items-center justify-between pb-2 border-b border-slate-200 dark:border-[#162548]">
+              <span className="text-xs font-bold text-slate-900 dark:text-white">Live Alerts</span>
+              <span className="text-[10px] text-blue-700 dark:text-blue-400 hover:underline font-semibold cursor-pointer">View All</span>
             </div>
             <div className="space-y-2">
               {[
@@ -425,16 +425,16 @@ export default function TransactionMonitorPage() {
                 { time: '16:35', title: 'Rapid transactions', sub: '15 tx in 2 minutes', risk: 'Medium' },
                 { time: '16:31', title: 'Cross-chain transfer', sub: 'ETH → BSC 12.5 ETH', risk: 'Low' },
               ].map((al, idx) => (
-                <div key={idx} className="p-1.5 rounded bg-[#070d1e] border border-[#162548] flex justify-between items-center">
+                <div key={idx} className="p-1.5 rounded-md bg-slate-50 dark:bg-[#070d1e] border border-slate-200 dark:border-[#162548] flex justify-between items-center">
                   <div>
                     <div className="flex items-center gap-1.5">
                       <span className="text-slate-500 font-mono text-[9px]">{al.time}</span>
-                      <span className="text-slate-200 font-semibold text-[11px]">{al.title}</span>
+                      <span className="text-slate-800 dark:text-slate-200 font-semibold text-[11px]">{al.title}</span>
                     </div>
-                    <span className="text-slate-400 text-[10px] block">{al.sub}</span>
+                    <span className="text-slate-500 dark:text-slate-400 text-[10px] block">{al.sub}</span>
                   </div>
                   <span className={`text-[9px] font-bold px-1.5 py-0.2 rounded border ${
-                    al.risk === 'High' ? 'text-red-400 border-red-800' : 'text-amber-400 border-amber-800'
+                    al.risk === 'High' ? 'text-red-700 bg-red-100 dark:text-red-400 dark:bg-transparent border-red-300 dark:border-red-800' : 'text-amber-800 bg-amber-100 dark:text-amber-400 dark:bg-transparent border-amber-300 dark:border-amber-800'
                   }`}>
                     {al.risk}
                   </span>

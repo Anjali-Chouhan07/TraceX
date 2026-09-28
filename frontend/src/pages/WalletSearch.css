@@ -1,0 +1,86 @@
+/* ============================================================
+   WALLET SEARCH & CASE DIRECTORY - GIGW & LEA PRODUCTION THEME
+   Default: Off-white Light Theme (#F8F9FA) with crisp #FFFFFF cards
+   Secondary: Dark Ops Theme (#0B142D)
+============================================================ */
+
+.wallet-search-page {
+  min-height: 100%;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Case Card Base - Crisp LEA Edges, No AI Glow */
+.case-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem; /* rounded-lg */
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+.dark .case-card {
+  background-color: #0b142d;
+  border-color: #1b2b52;
+  box-shadow: none;
+}
+
+.case-card:hover {
+  border-color: #2563eb;
+  box-shadow: 0 4px 12px 0 rgba(37, 99, 235, 0.08);
+}
+
+.dark .case-card:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* High Risk Border Indicator */
+.case-card-high-risk:hover {
+  border-color: #dc2626;
+}
+
+.dark .case-card-high-risk:hover {
+  border-color: #ef4444;
+}
+
+/* Suspicious Border Indicator */
+.case-card-suspicious:hover {
+  border-color: #7c3aed;
+}
+
+.dark .case-card-suspicious:hover {
+  border-color: #a855f7;
+}
+
+/* Medium Risk Border Indicator */
+.case-card-medium-risk:hover {
+  border-color: #d97706;
+}
+
+.dark .case-card-medium-risk:hover {
+  border-color: #f59e0b;
+}
+
+/* Low Risk Border Indicator */
+.case-card-low-risk:hover {
+  border-color: #059669;
+}
+
+.dark .case-card-low-risk:hover {
+  border-color: #10b981;
+}
+
+/* Standard crisp button */
+.btn-card-action {
+  border-radius: 0.375rem; /* rounded-md */
+  font-weight: 700;
+  transition: background-color 0.2s ease;
+}
+
+/* Wallet font styling */
+.font-wallet {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  letter-spacing: -0.02em;
+}

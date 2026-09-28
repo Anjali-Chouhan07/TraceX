@@ -104,66 +104,66 @@ export default function VaspDirectoryPage() {
       {/* Header Bar with Regional Badges */}
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div>
-          <span className="text-[10px] font-bold uppercase tracking-widest text-blue-400 block mb-0.5">
+          <span className="text-[10px] font-bold uppercase tracking-widest text-blue-700 dark:text-blue-400 block mb-0.5">
             VASP DIRECTORY
           </span>
-          <h1 className="text-xl font-extrabold text-white tracking-wide">
+          <h1 className="text-xl font-extrabold text-slate-900 dark:text-white tracking-wide">
             Virtual Asset Service Providers
           </h1>
-          <p className="text-xs text-slate-400 mt-0.5">
+          <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
             Search, verify and explore global VASPs (exchanges, wallets, and crypto service providers)
           </p>
         </div>
 
         {/* Regional Counts Badges */}
         <div className="flex items-center gap-2 text-xs flex-wrap">
-          <span className="px-2.5 py-1 rounded bg-[#0b142d] border border-[#1b2b52] text-slate-300">
-            North America: <strong className="text-white">88 VASPs</strong>
+          <span className="px-2.5 py-1 rounded-md bg-white dark:bg-[#0b142d] border border-slate-200 dark:border-[#1b2b52] text-slate-700 dark:text-slate-300 shadow-xs">
+            North America: <strong className="text-slate-900 dark:text-white">88 VASPs</strong>
           </span>
-          <span className="px-2.5 py-1 rounded bg-[#0b142d] border border-[#1b2b52] text-slate-300">
-            Europe: <strong className="text-white">78 VASPs</strong>
+          <span className="px-2.5 py-1 rounded-md bg-white dark:bg-[#0b142d] border border-slate-200 dark:border-[#1b2b52] text-slate-700 dark:text-slate-300 shadow-xs">
+            Europe: <strong className="text-slate-900 dark:text-white">78 VASPs</strong>
           </span>
-          <span className="px-2.5 py-1 rounded bg-[#0b142d] border border-[#1b2b52] text-slate-300">
-            Asia: <strong className="text-white">62 VASPs</strong>
+          <span className="px-2.5 py-1 rounded-md bg-white dark:bg-[#0b142d] border border-slate-200 dark:border-[#1b2b52] text-slate-700 dark:text-slate-300 shadow-xs">
+            Asia: <strong className="text-slate-900 dark:text-white">62 VASPs</strong>
           </span>
-          <span className="px-2.5 py-1 rounded bg-[#0b142d] border border-[#1b2b52] text-slate-300">
-            Other: <strong className="text-white">33 VASPs</strong>
+          <span className="px-2.5 py-1 rounded-md bg-white dark:bg-[#0b142d] border border-slate-200 dark:border-[#1b2b52] text-slate-700 dark:text-slate-300 shadow-xs">
+            Other: <strong className="text-slate-900 dark:text-white">33 VASPs</strong>
           </span>
         </div>
       </div>
 
       {/* KPI Cards */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        <div className="bg-[#0b142d] border border-[#1b2b52] rounded-xl p-4 shadow flex items-center justify-between">
+        <div className="bg-white dark:bg-[#0b142d] border border-slate-200 dark:border-[#1b2b52] rounded-lg p-4 shadow-xs flex items-center justify-between">
           <div>
-            <div className="text-2xl font-extrabold text-white">{stats.totalVASPs}</div>
-            <div className="text-xs text-slate-400 font-medium">Total VASPs</div>
+            <div className="text-2xl font-extrabold text-slate-900 dark:text-white">{stats.totalVASPs}</div>
+            <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">Total VASPs</div>
           </div>
-          <span className="text-xs font-bold text-emerald-400">↑ 12%</span>
+          <span className="text-xs font-bold text-emerald-700 dark:text-emerald-400">↑ 12%</span>
         </div>
 
-        <div className="bg-[#0b142d] border border-[#1b2b52] rounded-xl p-4 shadow flex items-center justify-between">
+        <div className="bg-white dark:bg-[#0b142d] border border-slate-200 dark:border-[#1b2b52] rounded-lg p-4 shadow-xs flex items-center justify-between">
           <div>
-            <div className="text-2xl font-extrabold text-emerald-400">{stats.verifiedVASPs}</div>
-            <div className="text-xs text-slate-400 font-medium">Verified</div>
+            <div className="text-2xl font-extrabold text-emerald-700 dark:text-emerald-400">{stats.verifiedVASPs}</div>
+            <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">Verified</div>
           </div>
-          <span className="text-xs font-bold text-emerald-400">↑ 8%</span>
+          <span className="text-xs font-bold text-emerald-700 dark:text-emerald-400">↑ 8%</span>
         </div>
 
-        <div className="bg-[#0b142d] border border-[#1b2b52] rounded-xl p-4 shadow flex items-center justify-between">
+        <div className="bg-white dark:bg-[#0b142d] border border-slate-200 dark:border-[#1b2b52] rounded-lg p-4 shadow-xs flex items-center justify-between">
           <div>
-            <div className="text-2xl font-extrabold text-red-400">{stats.highRiskVASPs}</div>
-            <div className="text-xs text-slate-400 font-medium">High Risk</div>
+            <div className="text-2xl font-extrabold text-red-600 dark:text-red-400">{stats.highRiskVASPs}</div>
+            <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">High Risk</div>
           </div>
-          <span className="text-xs font-bold text-red-400">↑ 20%</span>
+          <span className="text-xs font-bold text-red-600 dark:text-red-400">↑ 20%</span>
         </div>
 
-        <div className="bg-[#0b142d] border border-[#1b2b52] rounded-xl p-4 shadow flex items-center justify-between">
+        <div className="bg-white dark:bg-[#0b142d] border border-slate-200 dark:border-[#1b2b52] rounded-lg p-4 shadow-xs flex items-center justify-between">
           <div>
-            <div className="text-2xl font-extrabold text-amber-400">{stats.underReviewVASPs}</div>
-            <div className="text-xs text-slate-400 font-medium">Under Review</div>
+            <div className="text-2xl font-extrabold text-amber-700 dark:text-amber-400">{stats.underReviewVASPs}</div>
+            <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">Under Review</div>
           </div>
-          <span className="text-xs font-bold text-amber-400">↓ 5%</span>
+          <span className="text-xs font-bold text-amber-700 dark:text-amber-400">↓ 5%</span>
         </div>
       </div>
 
@@ -174,10 +174,10 @@ export default function VaspDirectoryPage() {
             <button
               key={t.label}
               onClick={() => setActiveCategory(t.label)}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all ${
+              className={`px-3 py-1.5 rounded-md text-xs font-semibold whitespace-nowrap transition-all cursor-pointer ${
                 activeCategory === t.label
-                  ? 'bg-blue-600 text-white shadow'
-                  : 'bg-[#0b142d] border border-[#1b2b52] text-slate-400 hover:text-white hover:bg-[#101e40]'
+                  ? 'bg-blue-700 text-white shadow-xs'
+                  : 'bg-white dark:bg-[#0b142d] border border-slate-200 dark:border-[#1b2b52] text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-[#101e40]'
               }`}
             >
               {t.label} ({t.count})
@@ -187,7 +187,7 @@ export default function VaspDirectoryPage() {
 
         <button
           onClick={() => setIsAddModalOpen(true)}
-          className="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-xs font-bold flex items-center gap-1.5 shadow-lg shadow-blue-600/30 transition-all cursor-pointer"
+          className="px-4 py-2 bg-blue-700 hover:bg-blue-600 text-white rounded-md text-xs font-bold flex items-center gap-1.5 shadow-xs transition-all cursor-pointer"
         >
           <Plus className="w-4 h-4" />
           <span>Add / Request VASP</span>
@@ -195,7 +195,7 @@ export default function VaspDirectoryPage() {
       </div>
 
       {/* Search & Filter Bar */}
-      <div className="bg-[#0b142d] border border-[#1b2b52] rounded-xl p-3 shadow-md flex flex-wrap items-center gap-3">
+      <div className="bg-white dark:bg-[#0b142d] border border-slate-200 dark:border-[#1b2b52] rounded-lg p-3 shadow-xs flex flex-wrap items-center gap-3">
         <div className="relative flex-1 min-w-[200px]">
           <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-3" />
           <input
@@ -203,14 +203,14 @@ export default function VaspDirectoryPage() {
             placeholder="Search by name, domain, country or registration number..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full bg-[#070d1e] border border-[#162548] focus:border-blue-500 rounded-lg pl-9 pr-3 py-2 text-xs text-white outline-none"
+            className="w-full bg-slate-50 dark:bg-[#070d1e] border border-slate-300 dark:border-[#162548] focus:border-blue-600 rounded-md pl-9 pr-3 py-2 text-xs text-slate-900 dark:text-white outline-none"
           />
         </div>
 
         <select
           value={selectedRiskFilter}
           onChange={(e) => setSelectedRiskFilter(e.target.value)}
-          className="bg-[#070d1e] border border-[#162548] rounded-lg px-3 py-2 text-xs text-white outline-none"
+          className="bg-slate-50 dark:bg-[#070d1e] border border-slate-300 dark:border-[#162548] rounded-md px-3 py-2 text-xs text-slate-900 dark:text-white outline-none cursor-pointer"
         >
           <option value="All Risk Levels">All Risk Levels</option>
           <option value="Low">Low Risk</option>
@@ -224,7 +224,7 @@ export default function VaspDirectoryPage() {
             setSelectedRiskFilter('All Risk Levels');
             setActiveCategory('All VASPs');
           }}
-          className="px-3 py-2 bg-[#070d1e] hover:bg-[#122045] border border-[#162548] text-slate-400 hover:text-white rounded-lg text-xs flex items-center gap-1"
+          className="px-3 py-2 bg-slate-50 dark:bg-[#070d1e] hover:bg-slate-100 dark:hover:bg-[#122045] border border-slate-300 dark:border-[#162548] text-slate-700 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white rounded-md text-xs flex items-center gap-1 transition-colors shadow-xs cursor-pointer"
         >
           <RotateCcw className="w-3 h-3" />
           <span>Reset</span>
@@ -234,9 +234,9 @@ export default function VaspDirectoryPage() {
       {/* Main Grid: VASP Table (Left 2 cols) & VASP Detail Profile (Right 1 col) */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Table Container */}
-        <div className="lg:col-span-2 bg-[#0b142d] border border-[#1b2b52] rounded-xl p-4 shadow-lg overflow-x-auto">
-          <table className="w-full text-left text-xs text-slate-300">
-            <thead className="bg-[#070d1e] text-slate-400 uppercase text-[10px] tracking-wider">
+        <div className="lg:col-span-2 bg-white dark:bg-[#0b142d] border border-slate-200 dark:border-[#1b2b52] rounded-lg p-4 shadow-xs overflow-x-auto">
+          <table className="w-full text-left text-xs text-slate-800 dark:text-slate-300">
+            <thead className="bg-slate-50 dark:bg-[#070d1e] text-slate-600 dark:text-slate-400 uppercase text-[10px] tracking-wider border-b border-slate-200 dark:border-[#162548]">
               <tr>
                 <th className="py-2.5 px-3">#</th>
                 <th className="py-2.5 px-3">Name</th>
@@ -249,40 +249,40 @@ export default function VaspDirectoryPage() {
                 <th className="py-2.5 px-3">Actions</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-[#152345]">
+            <tbody className="divide-y divide-slate-200 dark:divide-[#152345]">
               {filteredVasps.map((v, idx) => {
                 const isSelected = selectedVasp?.id === v.id;
                 return (
                   <tr
                     key={v.id}
                     onClick={() => setSelectedVasp(v)}
-                    className={`hover:bg-[#0e1b3d] cursor-pointer transition-colors ${
-                      isSelected ? 'bg-[#11214a] border-l-2 border-blue-500' : ''
+                    className={`hover:bg-slate-50 dark:hover:bg-[#0e1b3d] cursor-pointer transition-colors ${
+                      isSelected ? 'bg-blue-50/70 dark:bg-[#11214a] border-l-2 border-blue-600' : ''
                     }`}
                   >
                     <td className="py-3 px-3 text-slate-500">{idx + 1}</td>
-                    <td className="py-3 px-3 font-bold text-white">{v.name}</td>
+                    <td className="py-3 px-3 font-bold text-slate-900 dark:text-white">{v.name}</td>
                     <td className="py-3 px-3">
-                      <span className="w-6 h-6 rounded bg-[#162752] text-cyan-400 text-[10px] font-bold flex items-center justify-center">
+                      <span className="w-6 h-6 rounded bg-blue-100 dark:bg-[#162752] text-blue-800 dark:text-cyan-400 text-[10px] font-bold flex items-center justify-center">
                         {v.logoText}
                       </span>
                     </td>
-                    <td className="py-3 px-3 text-slate-300">{v.type}</td>
-                    <td className="py-3 px-3 text-slate-400">{v.country}</td>
-                    <td className="py-3 px-3 text-slate-300 text-[11px]">{v.regStatus}</td>
+                    <td className="py-3 px-3 text-slate-700 dark:text-slate-300">{v.type}</td>
+                    <td className="py-3 px-3 text-slate-600 dark:text-slate-400">{v.country}</td>
+                    <td className="py-3 px-3 text-slate-700 dark:text-slate-300 text-[11px]">{v.regStatus}</td>
                     <td className="py-3 px-3">
                       <span className={`text-[10px] font-bold ${
-                        v.riskLevel === 'High' ? 'text-red-400' :
-                        v.riskLevel === 'Medium' ? 'text-amber-400' : 'text-emerald-400'
+                        v.riskLevel === 'High' ? 'text-red-700 dark:text-red-400' :
+                        v.riskLevel === 'Medium' ? 'text-amber-700 dark:text-amber-400' : 'text-emerald-700 dark:text-emerald-400'
                       }`}>
                         {v.riskLevel}
                       </span>
                     </td>
                     <td className="py-3 px-3">
-                      <span className={`px-2 py-0.5 rounded text-[10px] font-bold ${
-                        v.status === 'Verified' ? 'bg-emerald-950 text-emerald-400 border border-emerald-800' :
-                        v.status === 'Review' ? 'bg-red-950 text-red-400 border border-red-800' :
-                        'bg-amber-950 text-amber-400 border border-amber-800'
+                      <span className={`px-2 py-0.5 rounded text-[10px] font-bold border ${
+                        v.status === 'Verified' ? 'bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-400 border-emerald-300 dark:border-emerald-800' :
+                        v.status === 'Review' ? 'bg-red-100 dark:bg-red-950 text-red-800 dark:text-red-400 border-red-300 dark:border-red-800' :
+                        'bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-400 border-amber-300 dark:border-amber-800'
                       }`}>
                         {v.status}
                       </span>
@@ -293,7 +293,7 @@ export default function VaspDirectoryPage() {
                           e.stopPropagation();
                           setSelectedVasp(v);
                         }}
-                        className="px-2.5 py-1 bg-blue-600/30 hover:bg-blue-600 text-blue-300 hover:text-white rounded text-[10px] font-semibold"
+                        className="px-2.5 py-1 bg-blue-50 dark:bg-blue-600/30 hover:bg-blue-100 dark:hover:bg-blue-600 text-blue-700 dark:text-blue-300 hover:text-blue-900 dark:hover:text-white rounded-md text-[10px] font-semibold transition-colors shadow-xs"
                       >
                         View
                       </button>
@@ -307,33 +307,33 @@ export default function VaspDirectoryPage() {
 
         {/* Right Detail Card for Selected VASP */}
         {selectedVasp && (
-          <div className="bg-[#0b142d] border border-[#1b2b52] rounded-xl p-5 shadow-lg space-y-4">
-            <div className="flex items-center justify-between pb-3 border-b border-[#162548]">
+          <div className="bg-white dark:bg-[#0b142d] border border-slate-200 dark:border-[#1b2b52] rounded-lg p-5 shadow-xs space-y-4">
+            <div className="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-[#162548]">
               <div className="flex items-center gap-2.5">
-                <div className="w-9 h-9 rounded-lg bg-[#162752] border border-[#233d80] text-cyan-400 text-sm font-bold flex items-center justify-center">
+                <div className="w-9 h-9 rounded-md bg-blue-100 dark:bg-[#162752] border border-blue-200 dark:border-[#233d80] text-blue-800 dark:text-cyan-400 text-sm font-bold flex items-center justify-center">
                   {selectedVasp.logoText}
                 </div>
                 <div>
-                  <h3 className="text-sm font-bold text-white">{selectedVasp.name}</h3>
-                  <p className="text-[10px] text-slate-400">World's leading cryptocurrency service</p>
+                  <h3 className="text-sm font-bold text-slate-900 dark:text-white">{selectedVasp.name}</h3>
+                  <p className="text-[10px] text-slate-500 dark:text-slate-400">Verified Virtual Asset Service Provider</p>
                 </div>
               </div>
               <button 
                 onClick={() => setIsAddModalOpen(true)}
-                className="text-[11px] text-blue-400 hover:underline"
+                className="text-[11px] text-blue-700 dark:text-blue-400 hover:underline font-semibold"
               >
                 + Edit
               </button>
             </div>
 
             {/* VASP Profile Tabs */}
-            <div className="flex items-center gap-2 border-b border-[#162548] pb-1">
+            <div className="flex items-center gap-2 border-b border-slate-200 dark:border-[#162548] pb-1">
               {['Overview', 'Regulatory', 'Services', 'Contact'].map((t) => (
                 <button
                   key={t}
                   onClick={() => setActiveTab(t)}
-                  className={`text-[11px] font-semibold pb-1 border-b-2 transition-all ${
-                    activeTab === t ? 'border-blue-500 text-blue-400' : 'border-transparent text-slate-400 hover:text-white'
+                  className={`text-[11px] font-semibold pb-1 border-b-2 transition-all cursor-pointer ${
+                    activeTab === t ? 'border-blue-700 text-blue-700 dark:border-blue-500 dark:text-blue-400' : 'border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
                   }`}
                 >
                   {t}
@@ -343,81 +343,81 @@ export default function VaspDirectoryPage() {
 
             {/* VASP Attributes Grid */}
             <div className="space-y-2 text-xs">
-              <div className="flex justify-between py-1 border-b border-[#142347]">
-                <span className="text-slate-400">Type</span>
-                <span className="text-white font-medium">{selectedVasp.type}</span>
+              <div className="flex justify-between py-1 border-b border-slate-100 dark:border-[#142347]">
+                <span className="text-slate-500 dark:text-slate-400">Type</span>
+                <span className="text-slate-900 dark:text-white font-medium">{selectedVasp.type}</span>
               </div>
-              <div className="flex justify-between py-1 border-b border-[#142347]">
-                <span className="text-slate-400">Website</span>
-                <a href={selectedVasp.website} target="_blank" rel="noreferrer" className="text-cyan-400 hover:underline flex items-center gap-1 font-mono text-[11px]">
+              <div className="flex justify-between py-1 border-b border-slate-100 dark:border-[#142347]">
+                <span className="text-slate-500 dark:text-slate-400">Website</span>
+                <a href={selectedVasp.website} target="_blank" rel="noreferrer" className="text-blue-700 dark:text-cyan-400 hover:underline flex items-center gap-1 font-mono text-[11px]">
                   {selectedVasp.website.replace('https://', '')} <ExternalLink className="w-3 h-3" />
                 </a>
               </div>
-              <div className="flex justify-between py-1 border-b border-[#142347]">
-                <span className="text-slate-400">Headquarters</span>
-                <span className="text-white font-medium">{selectedVasp.hq}</span>
+              <div className="flex justify-between py-1 border-b border-slate-100 dark:border-[#142347]">
+                <span className="text-slate-500 dark:text-slate-400">Headquarters</span>
+                <span className="text-slate-900 dark:text-white font-medium">{selectedVasp.hq}</span>
               </div>
-              <div className="flex justify-between py-1 border-b border-[#142347]">
-                <span className="text-slate-400">Founded</span>
-                <span className="text-white font-medium">{selectedVasp.founded}</span>
+              <div className="flex justify-between py-1 border-b border-slate-100 dark:border-[#142347]">
+                <span className="text-slate-500 dark:text-slate-400">Founded</span>
+                <span className="text-slate-900 dark:text-white font-medium">{selectedVasp.founded}</span>
               </div>
-              <div className="flex justify-between py-1 border-b border-[#142347]">
-                <span className="text-slate-400">Regulatory Status</span>
-                <span className="text-slate-200 text-right">{selectedVasp.regDetail}</span>
+              <div className="flex justify-between py-1 border-b border-slate-100 dark:border-[#142347]">
+                <span className="text-slate-500 dark:text-slate-400">Regulatory Status</span>
+                <span className="text-slate-800 dark:text-slate-200 text-right font-medium">{selectedVasp.regDetail}</span>
               </div>
-              <div className="flex justify-between py-1 border-b border-[#142347]">
-                <span className="text-slate-400">KYC Required</span>
-                <span className="text-white font-bold">{selectedVasp.kycRequired}</span>
+              <div className="flex justify-between py-1 border-b border-slate-100 dark:border-[#142347]">
+                <span className="text-slate-500 dark:text-slate-400">KYC Required</span>
+                <span className="text-slate-900 dark:text-white font-bold">{selectedVasp.kycRequired}</span>
               </div>
-              <div className="flex justify-between py-1 border-b border-[#142347]">
-                <span className="text-slate-400">Supported Assets</span>
-                <span className="text-white font-mono">{selectedVasp.supportedAssets}</span>
+              <div className="flex justify-between py-1 border-b border-slate-100 dark:border-[#142347]">
+                <span className="text-slate-500 dark:text-slate-400">Supported Assets</span>
+                <span className="text-slate-900 dark:text-white font-mono">{selectedVasp.supportedAssets}</span>
               </div>
-              <div className="flex justify-between py-1 border-b border-[#142347]">
-                <span className="text-slate-400">User Base</span>
-                <span className="text-white font-mono">{selectedVasp.userBase}</span>
+              <div className="flex justify-between py-1 border-b border-slate-100 dark:border-[#142347]">
+                <span className="text-slate-500 dark:text-slate-400">User Base</span>
+                <span className="text-slate-900 dark:text-white font-mono">{selectedVasp.userBase}</span>
               </div>
-              <div className="flex justify-between py-1 border-b border-[#142347]">
-                <span className="text-slate-400">Risk Level</span>
+              <div className="flex justify-between py-1 border-b border-slate-100 dark:border-[#142347]">
+                <span className="text-slate-500 dark:text-slate-400">Risk Level</span>
                 <span className={`font-bold ${
-                  selectedVasp.riskLevel === 'High' ? 'text-red-400' :
-                  selectedVasp.riskLevel === 'Medium' ? 'text-amber-400' : 'text-emerald-400'
+                  selectedVasp.riskLevel === 'High' ? 'text-red-600 dark:text-red-400' :
+                  selectedVasp.riskLevel === 'Medium' ? 'text-amber-600 dark:text-amber-400' : 'text-emerald-600 dark:text-emerald-400'
                 }`}>{selectedVasp.riskLevel}</span>
               </div>
             </div>
 
             <button
               onClick={() => showToast(`Full intelligence profile generated for ${selectedVasp.name}`, 'info')}
-              className="w-full py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-xs font-semibold flex items-center justify-center gap-1.5 shadow"
+              className="w-full py-2 bg-blue-700 hover:bg-blue-600 text-white rounded-md text-xs font-semibold flex items-center justify-center gap-1.5 shadow-xs transition-colors cursor-pointer"
             >
               <span>View Full Profile</span>
               <span>→</span>
             </button>
 
             {/* Compliance & Risk Indicators */}
-            <div className="pt-2 border-t border-[#162548]">
-              <span className="text-xs font-bold text-white block mb-2">
+            <div className="pt-2 border-t border-slate-200 dark:border-[#162548]">
+              <span className="text-xs font-bold text-slate-900 dark:text-white block mb-2">
                 Compliance & Risk Indicators
               </span>
               <div className="space-y-1.5 text-[11px]">
-                <div className="flex items-center gap-2 text-slate-300">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
                   <span>KYC / AML Compliance</span>
                 </div>
-                <div className="flex items-center gap-2 text-slate-300">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
                   <span>Sanctions Screening Integration</span>
                 </div>
-                <div className="flex items-center gap-2 text-slate-300">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
                   <span>Regulatory Registration</span>
                 </div>
-                <div className="flex items-center gap-2 text-slate-300">
-                  <AlertTriangle className="w-3.5 h-3.5 text-amber-400" />
+                <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+                  <AlertTriangle className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
                   <span>Adverse Media Check</span>
                 </div>
-                <div className="flex items-center gap-2 text-slate-300">
-                  <AlertTriangle className="w-3.5 h-3.5 text-amber-400" />
+                <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+                  <AlertTriangle className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
                   <span>Past Enforcement Actions</span>
                 </div>
               </div>
@@ -428,38 +428,38 @@ export default function VaspDirectoryPage() {
 
       {/* Add / Request VASP Modal */}
       {isAddModalOpen && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-[#0b142d] border border-[#1e3468] rounded-2xl max-w-lg w-full p-6 shadow-2xl relative">
+        <div className="fixed inset-0 bg-slate-900/60 dark:bg-black/80 backdrop-blur-xs z-50 flex items-center justify-center p-4">
+          <div className="bg-white dark:bg-[#0b142d] border border-slate-300 dark:border-[#1e3468] rounded-lg max-w-lg w-full p-6 shadow-2xl relative">
             <button 
               onClick={() => setIsAddModalOpen(false)}
-              className="absolute top-4 right-4 text-slate-400 hover:text-white"
+              className="absolute top-4 right-4 text-slate-400 hover:text-slate-800 dark:hover:text-white"
             >
               <X className="w-5 h-5" />
             </button>
 
-            <h3 className="text-base font-bold text-white mb-1">Add / Request New VASP</h3>
-            <p className="text-xs text-slate-400 mb-4">Register a Virtual Asset Service Provider for regulatory tracking</p>
+            <h3 className="text-base font-bold text-slate-900 dark:text-white mb-1">Add / Request New VASP</h3>
+            <p className="text-xs text-slate-500 dark:text-slate-400 mb-4">Register a Virtual Asset Service Provider for regulatory tracking</p>
 
             <form onSubmit={handleAddVasp} className="space-y-3 text-xs">
               <div>
-                <label className="block text-slate-300 font-semibold mb-1">VASP Name *</label>
+                <label className="block text-slate-700 dark:text-slate-300 font-semibold mb-1">VASP Name *</label>
                 <input
                   type="text"
                   placeholder="e.g., Bitpanda, CoinDCX, WazirX"
                   value={newVaspForm.name}
                   onChange={(e) => setNewVaspForm({ ...newVaspForm, name: e.target.value })}
-                  className="w-full bg-[#070d1e] border border-[#162548] focus:border-blue-500 rounded-lg p-2.5 text-white outline-none"
+                  className="w-full bg-slate-50 dark:bg-[#070d1e] border border-slate-300 dark:border-[#162548] focus:border-blue-600 rounded-md p-2.5 text-slate-900 dark:text-white outline-none"
                   required
                 />
               </div>
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-slate-300 font-semibold mb-1">Type</label>
+                  <label className="block text-slate-700 dark:text-slate-300 font-semibold mb-1">Type</label>
                   <select
                     value={newVaspForm.type}
                     onChange={(e) => setNewVaspForm({ ...newVaspForm, type: e.target.value })}
-                    className="w-full bg-[#070d1e] border border-[#162548] rounded-lg p-2 text-white outline-none"
+                    className="w-full bg-slate-50 dark:bg-[#070d1e] border border-slate-300 dark:border-[#162548] rounded-md p-2 text-slate-900 dark:text-white outline-none"
                   >
                     <option value="Exchange">Exchange</option>
                     <option value="Wallet Provider">Wallet Provider</option>
@@ -469,39 +469,39 @@ export default function VaspDirectoryPage() {
                 </div>
 
                 <div>
-                  <label className="block text-slate-300 font-semibold mb-1">Country / Jurisdiction</label>
+                  <label className="block text-slate-700 dark:text-slate-300 font-semibold mb-1">Country / Jurisdiction</label>
                   <input
                     type="text"
                     placeholder="e.g. India, USA, Singapore"
                     value={newVaspForm.country}
                     onChange={(e) => setNewVaspForm({ ...newVaspForm, country: e.target.value })}
-                    className="w-full bg-[#070d1e] border border-[#162548] rounded-lg p-2 text-white outline-none"
+                    className="w-full bg-slate-50 dark:bg-[#070d1e] border border-slate-300 dark:border-[#162548] rounded-md p-2 text-slate-900 dark:text-white outline-none"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-slate-300 font-semibold mb-1">Website URL</label>
+                <label className="block text-slate-700 dark:text-slate-300 font-semibold mb-1">Website URL</label>
                 <input
                   type="url"
                   placeholder="https://example.com"
                   value={newVaspForm.website}
                   onChange={(e) => setNewVaspForm({ ...newVaspForm, website: e.target.value })}
-                  className="w-full bg-[#070d1e] border border-[#162548] rounded-lg p-2 text-white outline-none"
+                  className="w-full bg-slate-50 dark:bg-[#070d1e] border border-slate-300 dark:border-[#162548] rounded-md p-2 text-slate-900 dark:text-white outline-none"
                 />
               </div>
 
-              <div className="flex justify-end gap-3 pt-3 border-t border-[#162548]">
+              <div className="flex justify-end gap-3 pt-3 border-t border-slate-200 dark:border-[#162548]">
                 <button
                   type="button"
                   onClick={() => setIsAddModalOpen(false)}
-                  className="px-4 py-2 border border-[#1c2e56] text-slate-300 rounded-lg text-xs"
+                  className="px-4 py-2 border border-slate-300 dark:border-[#1c2e56] text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-[#122045] rounded-md text-xs shadow-xs"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  className="px-5 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-xs font-bold shadow"
+                  className="px-5 py-2 bg-blue-700 hover:bg-blue-600 text-white rounded-md text-xs font-bold shadow-xs cursor-pointer"
                 >
                   Save VASP
                 </button>

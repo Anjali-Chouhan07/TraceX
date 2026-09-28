@@ -13,6 +13,34 @@ const AppContext = createContext();
 export function AppProvider({ children }) {
   // Navigation
   const [currentPage, setCurrentPage] = useState('dashboard');
+
+  // GIGW / LEA Theme State: Light Theme is default, Dark Theme for continuous screen monitoring
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('tracex_lea_theme') || 'light';
+  });
+
+  useEffect(() => {
+    localStorage.setItem('tracex_lea_theme', theme);
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+      document.body.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      document.body.classList.remove('dark');
+    }
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => (prev === 'light' ? 'dark' : 'light'));
+  };
+
+  // SAHYOG / NCRP Portal Integration Modal State
+  const [isSahyogModalOpen, setIsSahyogModalOpen] = useState(false);
+
+  const syncSahyogCase = (ncrpRef = "NCRP-2025-IN-98124") => {
+    showToast(`Connected to SAHYOG Portal. Synced NCRP Ref #${ncrpRef}`, 'success');
+    setIsSahyogModalOpen(false);
+  };
   
   // Data States
   const [stats, setStats] = useState(INITIAL_STATS);
@@ -146,7 +174,13 @@ export function AppProvider({ children }) {
       unreadAlertsCount,
       setUnreadAlertsCount,
       toast,
-      showToast
+      showToast,
+      theme,
+      setTheme,
+      toggleTheme,
+      isSahyogModalOpen,
+      setIsSahyogModalOpen,
+      syncSahyogCase
     }}>
       {children}
     </AppContext.Provider>
