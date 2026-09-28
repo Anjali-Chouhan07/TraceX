@@ -22,3 +22,5 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+backend/PR01SEP26_Deposit.csv
+backend/data/exchange_wallets.db
