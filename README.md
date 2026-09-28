@@ -26,10 +26,6 @@ It converts complex wallet-to-wallet transactions into an **interactive fund-flo
 
 ## Setup
 
-```bash
-git clone <repository-url>
-cd Sih26_ps183
-```
 
 ### Backend
 
@@ -61,9 +57,6 @@ After downloading, place it at:
 backend/data/exchange_wallets.db
 ```
 
-## Note
-
-TraceX provides **investigative leads and blockchain evidence for analysis**. VASP attribution should be independently verified through appropriate blockchain evidence and lawful information-request procedures.
 
 
 
