@@ -1,58 +1,45 @@
-## Dataset Setup
+# TraceX
 
-TraceX uses an exchange-wallet registry to identify known VASP/exchange wallet addresses during blockchain tracing.
+### Blockchain VASP Attribution Platform
 
-The exchange-wallet database is **not stored directly in this GitHub repository** because the database is approximately 700 MB in size.
+TraceX is a blockchain investigation platform that helps Law Enforcement Agencies (LEAs) trace suspicious cryptocurrency transactions and identify the **Virtual Asset Service Provider (VASP)** associated with the movement of illicit funds.
 
-### Download the Exchange Wallet Database
+It converts complex wallet-to-wallet transactions into an **interactive fund-flow graph**, analyzes suspicious patterns, and provides actionable VASP attribution.
 
-Download the required database from the following link:
+## Key Features
 
-**[Download `exchange_wallets_compact.db`] -- https://drive.google.com/file/d/15Ok3En5IR8qsaLsp_NCVD1IXUXgv-0_h/view?usp=sharing **
+* **Multi-hop transaction tracing** across blockchain wallets
+* **VASP / exchange wallet attribution** using a wallet registry
+* **Interactive fund-flow visualization**
+* Detection of **fund splitting, forwarding and suspicious movement patterns**
+* **Risk scoring** for traced transactions
+* Identification of potential **custodial/exchange endpoints**
+* Support for **investigation and legal-notice workflows**
 
-After downloading, place the file at:
+## Tech Stack
 
-```text
-TraceX/
-└── backend/
-    └── data/
-        └── exchange_wallets_compact.db
+**Frontend:** React, Vite, Cytoscape.js
+**Backend:** Python, FastAPI, NetworkX
+**Blockchain:** Alchemy API
+**Database:** SQLite
+**Storage:** IPFS / Pinata
+
+## Setup
+
+```bash
+git clone <repository-url>
+cd Sih26_ps183
 ```
 
-> **Important:** Rename the downloaded file to `exchange_wallets.db` if the backend is configured to look for `exchange_wallets.db`.
-
-The final structure should be:
-
-```text
-TraceX/
-├── frontend/
-├── backend/
-│   ├── data/
-│   │   └── exchange_wallets.db
-│   ├── main.py
-│   ├── requirements.txt
-│   └── ...
-└── README.md
-```
-
-### Running the Backend
-
-Install the required dependencies:
+### Backend
 
 ```bash
 cd backend
 pip install -r requirements.txt
-```
-
-Then start the backend:
-
-```bash
 uvicorn main:app --reload
 ```
 
-### Running the Frontend
-
-Open another terminal:
+### Frontend
 
 ```bash
 cd frontend
@@ -60,8 +47,24 @@ npm install
 npm run dev
 ```
 
-The frontend will then be available through the URL shown by Vite.
+Add your Alchemy API key to the backend `.env` file.
 
-### Note
+## Exchange Database
 
-The database is provided separately because of its large file size. The GitHub repository contains the application source code and configuration required to run TraceX, while the exchange-wallet registry is downloaded separately.
+TraceX uses a large exchange-wallet registry for VASP attribution. The database contains millions of wallet records and is approximately **700 MB**, so it is not included in the GitHub repository.
+
+**[Download Exchange Wallet Database](https://drive.google.com/file/d/15Ok3En5IR8qsaLsp_NCVD1IXUXgv-0_h/view?usp=sharing)**
+
+After downloading, place it at:
+
+```text
+backend/data/exchange_wallets.db
+```
+
+## Note
+
+TraceX provides **investigative leads and blockchain evidence for analysis**. VASP attribution should be independently verified through appropriate blockchain evidence and lawful information-request procedures.
+
+
+
+**TraceX |  VASP Attribution**
